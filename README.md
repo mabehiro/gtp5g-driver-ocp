@@ -33,7 +33,7 @@ kernel-modules-extra-5.14.0-284.54.1.el9_2.x86_64
 
 `````
 
-AEnsure to replace any placeholders with actual values and configurations specific to your setup.
+Ensure to replace any placeholders with actual values and configurations specific to your setup.
 Then build, gtp5g driver BuildConifg and Image Steram.
 
 ````
