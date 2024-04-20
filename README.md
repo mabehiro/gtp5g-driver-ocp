@@ -1,5 +1,5 @@
-# Installing GTP5G Driver on OCP 4.15
-To integrate [free5gc](https://free5gc.org/) with Openshift, the [gtp5g kernel driver](https://github.com/free5gc/gtp5g) must be loaded on the UPF worker node. Openshift offers the drivers toolkit, which includes all dependencies necessary for building the kernel module and installing it atop base images. The following steps outline the procedure using the Driver Tool Kit for OCP 4.15, which should also be compatible with version 4.14:
+# Installing GTP5G Driver with the Driver Toolkit on OCP 4.15
+To integrate [free5gc](https://free5gc.org/) with Openshift, the [gtp5g kernel driver](https://github.com/free5gc/gtp5g) must be loaded on the UPF worker node. Openshift offers the drivers toolkit, which includes all dependencies necessary for building the kernel module and installing it atop base images. The following steps outline the procedure using the Driver Toolkit for OCP 4.15, which should also be compatible with version 4.14:
 
 
 **Note**: Please refer to the [product documentation](https://docs.openshift.com/container-platform/4.15/hardware_enablement/psap-driver-toolkit.html) for detailed usage instructions.
