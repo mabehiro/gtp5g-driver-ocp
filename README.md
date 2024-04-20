@@ -37,6 +37,11 @@ Ensure to replace any placeholders with actual values and configurations specifi
 Then build, gtp5g driver BuildConifg and Image Steram.
 
 ````
+$ oc create -f 0000-buildconfig-gtp5g.yaml
+````
+
+
+````
 apiVersion: image.openshift.io/v1
 kind: ImageStream
 metadata:
