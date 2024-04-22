@@ -81,10 +81,8 @@ spec:
       RUN make KVER=${KERNEL_VERSION}
 
       FROM ${RHCOS_IMAGE}
-      # FROM registry.redhat.io/ubi9/ubi-minimal  # this image doesn have kernel sources
       ARG KERNEL_VERSION
 
-      # COPY --from=builder /usr/src/gtp5g/gtp5g.ko /lib/modules/${KVER}/kernel/drivers/net/
       COPY --from=builder /etc/driver-toolkit-release.json /etc/
       COPY --from=builder /usr/src/gtp5g/gtp5g.ko /root/
       RUN ln -s /root/gtp5g.ko /lib/modules/${KERNEL_VERSION}/kernel/drivers/net
@@ -95,8 +93,6 @@ spec:
       buildArgs:
         - name: DTK
           value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b9cd86347ba410c90b4a34fe9c1b25951e0f0cd38ceca1d3ccd4bae96f084edb
-        # - name: KVER
-        #   value: 5.14.0-284.59.1.el9_2.x86_64
         - name: KERNEL_VERSION
           value: 5.14.0-284.59.1.el9_2.x86_64
         - name: RHCOS_IMAGE
